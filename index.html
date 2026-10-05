@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARVOX Finance — Intelligent Self-Custody</title>
+<meta name="description" content="ARVOX is building an intelligent self-custodial wallet for simpler, safer on-chain interactions." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#050506" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ARVOX Finance — Intelligent Self-Custody" />
+<meta property="og:description" content="ARVOX is building an intelligent self-custodial wallet for simpler, safer on-chain interactions." />
+<meta property="og:image" content="favicon.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ARVOX Finance — Intelligent Self-Custody" />
+<meta name="twitter:description" content="ARVOX is building an intelligent self-custodial wallet for simpler, safer on-chain interactions." />
+<meta name="twitter:image" content="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="arvox.css" />
+<noscript><style>body.page{opacity:1!important;transform:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ARVOX Finance","description":"ARVOX is building an intelligent self-custodial wallet for simpler, safer on-chain interactions.","slogan":"Your on-chain life, smarter."}</script>
+</head>
+<body class="page" data-page="home">
+<div class="bg" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="ARVOX Finance home"><span class="brand-mark" aria-hidden="true">A</span><span><b>ARVOX</b><small>FINANCE</small></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Waitlist</a></nav>
+    <div class="nav-cta"><span class="status-pill"><i></i>In development</span><button class="btn btn-sm" data-wallet type="button">Connect · soon</button><button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button></div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Join waitlist</a></div>
+</header>
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>ARVOX is currently in development · Pre-launch</span>
+        <h1>Your on-chain life,<br /><em>smarter.</em></h1>
+        <p class="lead">ARVOX is building an intelligent self-custodial wallet for simpler, safer on-chain interactions. Step inside the product experience — it is not publicly launched yet, and nothing here moves real funds.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="demo">Enter the wallet demo →</a>
+          <a class="btn btn-ghost" href="waitlist">Join the waitlist</a>
+        </div>
+        <div class="hero-note"><span>Not live</span><span>No real transactions</span><span>We never ask for seed phrases</span></div>
+        <div class="trust">
+          <div><b>Self-custody</b><small>Your keys. Your assets. Planned.</small></div>
+          <div><b>AI agent</b><small>Plans. Checks. Explains. In development.</small></div>
+          <div><b>Smart security</b><small>Simulation + approval. In development.</small></div>
+        </div>
+      </div>
+      <div class="preview reveal" aria-label="Wallet entry preview">
+        <span class="concept-badge">STEP INSIDE · DEMO PREVIEW</span>
+        <div class="phone-shell">
+          <div class="phone-top"><span>◈ ARVOX</span><span class="badge-demo">DEMO</span></div>
+          <div class="phone-body">
+            <div class="bal"><small>Total balance</small><b>—</b><em style="color:var(--muted)">Data unavailable · provider not configured</em></div>
+            <div class="quick"><span><b>↗</b>Send</span><span><b>⇄</b>Swap</span><span><b>⧉</b>Bridge</span><span><b>⊙</b>Receive</span></div>
+            <div class="empty"><b>Data unavailable.</b><br /><span>Live balances need MARKET_DATA_API_KEY + RPC_URL. This entry screen invents nothing.</span></div>
+            <div style="display:flex;gap:8px;margin-top:12px"><a class="btn btn-gold btn-sm" href="demo" style="flex:1">Open full demo</a><a class="btn btn-sm" href="technology" style="flex:1">How it works</a></div>
+            <p class="disclaimer">You just entered the ARVOX wallet concept. Full interactive demo lives on the Demo page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" id="how">
+    <div class="reveal"><span class="kicker">How it will work</span>
+      <h2>Plan. Check. Approve.</h2>
+      <p class="sub">Plain-language intent becomes a simulatable preview. Execution unlocks only after wallet infrastructure is ready.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><b class="num">1</b><h3>Ask</h3><p class="sub">The agent drafts the route — it never signs by itself.</p><span class="badge-soon">In development</span></div>
+      <div class="step reveal"><b class="num">2</b><h3>Review</h3><p class="sub">Network, fees, contract and risk in one card.</p><span class="badge-soon">In development</span></div>
+      <div class="step reveal"><b class="num">3</b><h3>Approve</h3><p class="sub">Explicit approval only. No silent connects.</p><span class="badge-soon">Coming soon</span></div>
+    </div>
+    <div class="panel reveal"><b>Live-data status</b><div id="market-body"><div class="skel"></div></div>
+      <div class="tabs" style="margin-top:12px"><button class="tab active" data-state="empty" type="button">Coming-soon</button><button class="tab" data-state="loading" type="button">Loading</button><button class="tab" data-state="error" type="button">Error</button></div>
+      <p class="muted">Env: <code>MARKET_DATA_API_KEY</code> · <code>RPC_URL</code> · <code>NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID</code> — <span data-env="market">…</span></p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><a class="brand" href="./" aria-label="ARVOX Finance home"><span class="brand-mark">A</span><span><b>ARVOX</b><small style="display:block;letter-spacing:.42em;font-size:9px;color:var(--muted)">FINANCE</small></span></a>
+      <p>“Your on-chain life, smarter.”</p><span class="dev-note">ARVOX is currently in development.</span></div>
+    <div><div class="foot-links" id="foot-socials"></div>
+      <p class="muted" style="font-size:12px;margin-top:10px">Only configured links appear clickable. Unconfigured entries show as “soon”.</p></div>
+  </div>
+  <div class="wrap copy"><span>© <span id="yr">2026</span> ARVOX Finance. Pre-launch — no live wallet.</span><span>SECURE / INTELLIGENT / YOURS</span></div>
+</footer>
+<div class="modal-bg" id="wallet-modal" role="dialog" aria-modal="true" aria-label="Wallet connection">
+  <div class="modal"><h3>Wallet connection — coming soon</h3>
+    <p>Wallet execution is disabled pre-launch and enables only after ARVOX wallet infrastructure is ready. This site never asks for seed phrases or private keys.</p>
+    <div style="display:flex;gap:10px;margin-top:14px"><a class="btn btn-gold" href="waitlist" data-close style="flex:1">Join waitlist</a><button class="btn" data-close type="button">Close</button></div>
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="arvox.js"></script>
+</body>
+</html>

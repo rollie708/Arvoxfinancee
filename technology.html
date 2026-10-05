@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARVOX Finance — Technology, Security, Vision</title>
+<meta name="description" content="How ARVOX is being built: agent architecture, self-custody security model, and roadmap. Pre-launch — no audits claimed." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#050506" />
+<link rel="stylesheet" href="arvox.css" />
+<noscript><style>body.page{opacity:1!important;transform:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="page" data-page="technology">
+<div class="bg" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="ARVOX Finance home"><span class="brand-mark" aria-hidden="true">A</span><span><b>ARVOX</b><small>FINANCE</small></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Waitlist</a></nav>
+    <div class="nav-cta"><span class="status-pill"><i></i>In development</span><button class="btn btn-sm" data-wallet type="button">Connect · soon</button><button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button></div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Join waitlist</a></div>
+</header>
+<main class="wrap">
+  <section class="hero" style="padding-bottom:0">
+    <span class="kicker">Technology · Security · Vision</span>
+    <h1 style="font-size:clamp(32px,6vw,52px)">Built to keep<br /><em style="font-style:normal;background:linear-gradient(180deg,var(--gold3),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent">you in control.</em></h1>
+    <p class="sub">Honest status on every layer. No fake audits, no fake partnerships, no claimed users.</p>
+  </section>
+  <section class="section">
+    <h2>Architecture</h2>
+    <div class="grid">
+      <article class="card reveal"><div class="icon">◈</div><h3>Client</h3><p>Next.js + TypeScript + Tailwind. Keys stay with you; the site never sees them.</p><br /><span class="badge-soon">In development</span></article>
+      <article class="card reveal"><div class="icon">✦</div><h3>Agent</h3><p>Parses intent, drafts routes, explains trade-offs. Signs nothing by itself.</p><br /><span class="badge-soon">In development</span></article>
+      <article class="card reveal"><div class="icon">◒</div><h3>Risk engine</h3><p>Contract, permission and simulation checks before any approval screen.</p><br /><span class="badge-soon">In development</span></article>
+      <article class="card reveal"><div class="icon">⧉</div><h3>Chain layer</h3><p>wagmi + viem reads via RPC_URL; TanStack Query caches. Unset → Data unavailable.</p><br /><span class="badge-soon">Coming soon</span></article>
+      <article class="card reveal"><div class="icon">$</div><h3>Market data</h3><p>Real provider via MARKET_DATA_API_KEY. Missing key → Data unavailable, never invented.</p><br /><span data-env="market" class="badge-soon">…</span></article>
+      <article class="card reveal"><div class="icon">⬣</div><h3>Waitlist backend</h3><p>Real database behind WAITLIST_API_URL. DATABASE_URL never ships to browsers.</p><br /><span data-env="db" class="badge-soon">…</span></article>
+    </div>
+    <div class="panel reveal"><b>Environment wiring</b>
+      <div class="table-scroll"><table class="env-table"><tr><th>Variable</th><th>Where</th><th>Missing →</th></tr>
+      <tr><td><code>NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID</code></td><td>Client (safe)</td><td>Connect stays “soon”</td></tr>
+      <tr><td><code>RPC_URL</code></td><td>Client read-only endpoint</td><td>Data unavailable</td></tr>
+      <tr><td><code>MARKET_DATA_API_KEY</code></td><td>Client / server proxy</td><td>Data unavailable</td></tr>
+      <tr><td><code>DATABASE_URL</code></td><td>Server only — never exposed</td><td>Waitlist queues locally</td></tr></table></div>
+      <p class="muted">Secret keys are never bundled into arvox.js or config.js.</p>
+    </div>
+  </section>
+  <section class="section" id="security">
+    <h2>What this site will never do</h2>
+    <ul class="safety clean">
+      <li class="reveal">✕ &nbsp;Never generates or requests seed phrases / private keys</li>
+      <li class="reveal">✕ &nbsp;Never auto-signs, auto-sends, or silently connects</li>
+      <li class="reveal">✕ &nbsp;Never executes swaps, bridges, or unlimited approvals pre-launch</li>
+      <li class="reveal">✓ &nbsp;Explicit approvals only — after wallet infrastructure audit + launch</li>
+    </ul>
+    <p class="muted">Security audits: none claimed yet. Audits will be published here when they exist — not before.</p>
+  </section>
+  <section class="section" id="roadmap">
+    <h2>Roadmap</h2>
+    <div class="steps">
+      <div class="step reveal"><b class="num">Now</b><h3>Pre-launch demo</h3><p class="sub">Concept wallet, waitlist, env-gated data states.</p></div>
+      <div class="step reveal"><b class="num">Next</b><h3>Live reads</h3><p class="sub">RPC + market provider wired; simulation + risk checks.</p></div>
+      <div class="step reveal"><b class="num">Later</b><h3>Gated execution</h3><p class="sub">Self-custodial approvals with limits. Only when safe.</p></div>
+    </div>
+    <div style="margin-top:18px"><a class="btn btn-gold" href="demo">Try the demo</a> <a class="btn btn-ghost" href="waitlist">Join waitlist</a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><a class="brand" href="./"><span class="brand-mark">A</span><span><b>ARVOX</b><small style="display:block;letter-spacing:.42em;font-size:9px;color:var(--muted)">FINANCE</small></span></a>
+      <p>“Your on-chain life, smarter.”</p><span class="dev-note">ARVOX is currently in development.</span></div>
+    <div><div class="foot-links" id="foot-socials"></div></div>
+  </div>
+  <div class="wrap copy"><span>© <span id="yr">2026</span> ARVOX Finance.</span><span>SECURE / INTELLIGENT / YOURS</span></div>
+</footer>
+<div class="modal-bg" id="wallet-modal" role="dialog" aria-modal="true" aria-label="Wallet connection">
+  <div class="modal"><h3>Wallet connection — coming soon</h3><p>Execution enables only after wallet infrastructure is ready.</p>
+  <div style="display:flex;gap:10px;margin-top:14px"><a class="btn btn-gold" href="waitlist" data-close style="flex:1">Join waitlist</a><button class="btn" data-close type="button">Close</button></div></div>
+</div>
+<script src="config.js"></script>
+<script src="arvox.js"></script>
+</body>
+</html>

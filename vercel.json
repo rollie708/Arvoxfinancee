@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/assets", "destination": "/demo.html" },
+    { "source": "/activity", "destination": "/demo.html" },
+    { "source": "/send", "destination": "/demo.html" },
+    { "source": "/swap", "destination": "/demo.html" },
+    { "source": "/bridge", "destination": "/demo.html" },
+    { "source": "/ai", "destination": "/demo.html" },
+    { "source": "/settings", "destination": "/demo.html" },
+    { "source": "/automations", "destination": "/demo.html" },
+    { "source": "/payments", "destination": "/demo.html" },
+    { "source": "/security", "destination": "/technology.html" },
+    { "source": "/permissions", "destination": "/technology.html" }
+  ],
+  "headers": [
+    { "source": "/arvox.css", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] },
+    { "source": "/arvox.js", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] },
+    { "source": "/config.js", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] },
+    { "source": "/favicon.svg", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ]
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARVOX Finance — Join the Waitlist</title>
+<meta name="description" content="Join the ARVOX waitlist. Email only — no wallet connection, no seed phrase, ever." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#050506" />
+<link rel="stylesheet" href="arvox.css" />
+<noscript><style>body.page{opacity:1!important;transform:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="page" data-page="waitlist">
+<div class="bg" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="ARVOX Finance home"><span class="brand-mark" aria-hidden="true">A</span><span><b>ARVOX</b><small>FINANCE</small></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Waitlist</a></nav>
+    <div class="nav-cta"><span class="status-pill"><i></i>In development</span><button class="btn btn-sm" data-wallet type="button">Connect · soon</button><button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button></div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Join waitlist</a></div>
+</header>
+<main class="wrap">
+  <section class="section">
+    <div class="wait reveal" style="margin-top:10px">
+      <span class="kicker">Waitlist · open · COMING SOON to launch</span>
+      <h2>Be there before launch.</h2>
+      <p class="sub">You’re inside the waitlist room. Email only — wallet address optional, never required. No connection, no signature, no seed.</p>
+      <div class="steps" style="margin-top:16px">
+        <div class="step"><b class="num">1</b><h3>Request access</h3><p class="sub">Leave your email below.</p></div>
+        <div class="step"><b class="num">2</b><h3>Get notified</h3><p class="sub">We email you when live reads open.</p></div>
+        <div class="step"><b class="num">3</b><h3>Enter first</h3><p class="sub">Early cohort enters before public launch.</p></div>
+      </div>
+      <form id="wait-form" novalidate style="margin-top:18px">
+        <label>Email<input id="w-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></label>
+        <label>Wallet address <span class="hint">(optional — early-access matching only)</span><input id="w-wallet" name="wallet" placeholder="0x..." autocomplete="off" spellcheck="false" /></label>
+        <label>What should ARVOX do first for you? <span class="hint">(optional)</span><input id="w-note" name="note" placeholder="e.g. safer swaps" maxlength="140" /></label>
+        <button class="btn btn-gold" type="submit">Request early access →</button>
+        <span class="hint">Stored via WAITLIST_API_URL → real database (DATABASE_URL stays server-only). Unconfigured → queued locally in preview.</span>
+      </form>
+      <div class="form-err" id="w-err" hidden></div>
+      <div class="form-ok" id="w-ok" hidden></div>
+    </div>
+    <div class="faq reveal"><b>Is ARVOX live?</b><p>No. ARVOX is currently in development. This waitlist gets you in first — nothing here is a live wallet.</p></div>
+    <div class="faq reveal"><b>Do I need to connect a wallet?</b><p>No. Joining takes email only. Connection stays disabled until infrastructure is ready.</p></div>
+    <div class="faq reveal"><b>Will you ever ask for my seed phrase?</b><p>Never. ARVOX will never request seed phrases or private keys, on this site or anywhere.</p></div>
+    <div style="margin:18px 0"><a class="btn btn-ghost" href="demo">← Back to demo</a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><a class="brand" href="./"><span class="brand-mark">A</span><span><b>ARVOX</b><small style="display:block;letter-spacing:.42em;font-size:9px;color:var(--muted)">FINANCE</small></span></a>
+      <p>“Your on-chain life, smarter.”</p><span class="dev-note">ARVOX is currently in development.</span></div>
+    <div><div class="foot-links" id="foot-socials"></div></div>
+  </div>
+  <div class="wrap copy"><span>© <span id="yr">2026</span> ARVOX Finance.</span><span>SECURE / INTELLIGENT / YOURS</span></div>
+</footer>
+<div class="modal-bg" id="wallet-modal" role="dialog" aria-modal="true" aria-label="Wallet connection">
+  <div class="modal"><h3>Wallet connection — coming soon</h3><p>Join the waitlist instead — we’ll notify you at launch.</p>
+  <div style="display:flex;gap:10px;margin-top:14px"><button class="btn btn-gold" data-close type="button" style="flex:1">Got it</button></div></div>
+</div>
+<script src="config.js"></script>
+<script src="arvox.js"></script>
+</body>
+</html>

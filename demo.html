@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARVOX Finance — Wallet Demo</title>
+<meta name="description" content="Try the ARVOX wallet demo. A concept preview — not live, no real funds move." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#050506" />
+<meta property="og:title" content="ARVOX Finance — Wallet Demo" />
+<meta property="og:description" content="Concept preview of the ARVOX intelligent self-custodial wallet. DEMO only." />
+<link rel="stylesheet" href="arvox.css" />
+<noscript><style>body.page{opacity:1!important;transform:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="page" data-page="demo">
+<div class="bg" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="ARVOX Finance home"><span class="brand-mark" aria-hidden="true">A</span><span><b>ARVOX</b><small>FINANCE</small></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Waitlist</a></nav>
+    <div class="nav-cta"><span class="status-pill"><i></i>In development</span><button class="btn btn-sm" data-wallet type="button">Connect · soon</button><button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button></div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="./">Enter</a><a href="demo">Demo</a><a href="technology">Technology</a><a href="waitlist">Join waitlist</a></div>
+</header>
+<main class="wrap">
+  <section class="hero" style="padding-bottom:0">
+    <span class="badge-demo">DEMO · CONCEPT PREVIEW — NOT LIVE</span>
+    <h1 style="font-size:clamp(32px,6vw,52px)">The wallet,<br /><em style="font-style:normal;background:linear-gradient(180deg,var(--gold3),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent">before launch.</em></h1>
+    <p class="sub">This demo shows the actual product experience being built. Balances load only with configured providers — otherwise you see <b>Data unavailable</b>. Nothing here signs or sends.</p>
+    <div class="demo-banner"><span class="badge-demo">DEMO</span><span><b>No real funds.</b> No wallets connect, no transactions execute, no approvals are requested. Toggle the concept layout to preview design only.</span></div>
+    <p class="muted" id="route-note" hidden></p>
+  </section>
+  <section class="demo-layout">
+    <div class="wallet reveal" aria-label="ARVOX demo wallet">
+      <div class="wallet-bar"><span>9:41</span><span>◈ ARVOX · <b>DEMO</b></span><span>●◍▮</span></div>
+      <div class="wallet-screen">
+        <div class="bal" id="demo-balance"><div class="skel" style="height:30px"></div></div>
+        <div class="w-tabs"><button class="w-tab active" data-pane="assets" type="button">Assets</button><button class="w-tab" data-pane="activity" type="button">Activity</button><button class="w-tab" data-pane="agent" type="button">Agent</button></div>
+        <div class="w-pane" data-pane="assets" id="demo-assets"></div>
+        <div class="w-pane" data-pane="activity" id="demo-activity" hidden></div>
+        <div class="w-pane" data-pane="agent" hidden>
+          <form id="ask-form"><label>Ask ARVOX (DEMO)<input id="ask-q" placeholder="Swap 500 USDC to ETH" maxlength="120" /></label>
+          <button class="btn btn-gold btn-sm" type="submit" style="margin-top:10px;width:100%">Explain this action</button></form>
+          <div id="ask-out" style="margin-top:12px"><p class="muted">Ask anything to see how the agent will explain before approval.</p></div>
+        </div>
+        <div style="margin-top:12px"><button class="btn btn-ghost btn-sm" id="demo-concept-btn" type="button" style="width:100%">Preview DEMO layout</button>
+        <p class="muted" style="font-size:12px">Concept layout uses illustrative figures, watermarked DEMO — never presented as live.</p></div>
+      </div>
+      <div class="w-nav"><button class="active" type="button"><b>⌂</b>Home</button><button type="button"><b>◈</b>Assets</button><button type="button"><b>✦</b>Agent</button><button type="button"><b>⚙</b>Settings</button></div>
+    </div>
+    <div class="demo-side">
+      <div class="card reveal" id="card-send"><span class="badge-soon">Send · COMING SOON</span><h3>Send</h3><p>Clear recipient + fee preview. Disabled in DEMO — <button class="btn btn-sm" data-wallet type="button" style="margin-left:6px">Try</button></p></div>
+      <div class="card reveal" id="card-swap"><span class="badge-soon">Swap · COMING SOON</span><h3>Swap</h3><p>Route, slippage and risk explained first. No execution here.</p></div>
+      <div class="card reveal" id="card-bridge"><span class="badge-soon">Bridge · COMING SOON</span><h3>Bridge</h3><p>Cross-chain preview with explicit approval gating.</p></div>
+      <div class="card reveal"><span class="badge-demo">DEMO</span><h3>Transaction preview</h3><p class="sub">Network: Data unavailable · Fee: Data unavailable · Risk: review required. Approve stays inert until infrastructure is ready.</p>
+        <div style="display:flex;gap:8px;margin-top:10px"><button class="btn btn-gold btn-sm" data-wallet type="button">Approve · disabled</button><a class="btn btn-sm" href="technology">Why safe</a></div></div>
+      <div class="faq reveal"><b>Why “Data unavailable”?</b><p>RPC_URL and MARKET_DATA_API_KEY are unset in this build. The demo refuses to invent numbers — configure env vars and these panels switch to live data.</p></div>
+    </div>
+  </section>
+  <section class="section"><a class="btn btn-gold" href="waitlist">Get inside at launch →</a> <a class="btn btn-ghost" href="technology">Read the technology</a></section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><a class="brand" href="./"><span class="brand-mark">A</span><span><b>ARVOX</b><small style="display:block;letter-spacing:.42em;font-size:9px;color:var(--muted)">FINANCE</small></span></a>
+      <p>“Your on-chain life, smarter.”</p><span class="dev-note">ARVOX is currently in development.</span></div>
+    <div><div class="foot-links" id="foot-socials"></div></div>
+  </div>
+  <div class="wrap copy"><span>© <span id="yr">2026</span> ARVOX Finance. DEMO — no live wallet.</span><span>SECURE / INTELLIGENT / YOURS</span></div>
+</footer>
+<div class="modal-bg" id="wallet-modal" role="dialog" aria-modal="true" aria-label="Wallet connection">
+  <div class="modal"><h3>Disabled in DEMO</h3><p>This action would connect, sign, or send in a live wallet. It is inert here by design.</p>
+  <div style="display:flex;gap:10px;margin-top:14px"><a class="btn btn-gold" href="waitlist" data-close style="flex:1">Join waitlist</a><button class="btn" data-close type="button">Close</button></div></div>
+</div>
+<script src="config.js"></script>
+<script src="arvox.js"></script>
+</body>
+</html>
